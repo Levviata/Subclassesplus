@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "HOwRVK9PQKexloHnppl2RJBsFSqjd3TXFLWc+AWFT7ZHiH4Q92ligyInpZ6USGjhUGnUeh4WJt/u+hdgxbk6kA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\AROON\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\Subclassesplus\\Subclassesplus.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AROON\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}

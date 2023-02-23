@@ -1,0 +1,3 @@
+displayName = Subclasses+
+author = Levvia
+version = 0.1
