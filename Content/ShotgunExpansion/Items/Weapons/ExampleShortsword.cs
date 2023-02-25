@@ -3,7 +3,7 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Subclassesplus.Content.Items.Weapons
+namespace Subclassesplus.Content.ShotgunExpansion.Items.Weapons
 {
 	public class ExampleShortsword : ModItem
 	{

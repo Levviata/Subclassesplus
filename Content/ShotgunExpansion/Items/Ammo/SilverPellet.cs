@@ -3,9 +3,9 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Subclassesplus.Content.Items.Ammo.Shells
+namespace Subclassesplus.Content.ShotgunExpansion.Items.Ammo
 {
-	public class IronShell : ModItem
+	public class SilverPellet : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
@@ -45,11 +45,11 @@ namespace Subclassesplus.Content.Items.Ammo.Shells
 			Item.height = 32;
 
 			Item.DamageType = DamageClass.Ranged; // Ranged, Magic, etc. ModContent.GetInstance<ExampleDamageClass>();
-			Item.damage = 6;
+			Item.damage = 7;
 			//Item.crit = 6; // 6% + 4% (default crit) = 8% crit chance
 			Item.maxStack = 9999;
-			Item.knockBack = 1; // Average knockback
-			Item.shootSpeed = 5f; // Chlorophyte Shotbow velocity of 11.5f + Wooden Arrows velocity of 3f = 14.5
+			Item.knockBack = 1.6f; // Average knockback
+			Item.shootSpeed = 7f; // Chlorophyte Shotbow velocity of 11.5f + Wooden Arrows velocity of 3f = 14.5
 			Item.shoot = ProjectileID.Bullet;
 			Item.consumable = true;
 			Item.ammo = AmmoID.Bullet; // ModContent.ItemType<ExampleCustomAmmo>();
@@ -64,10 +64,10 @@ namespace Subclassesplus.Content.Items.Ammo.Shells
 
 		public override void AddRecipes()
 		{
-			Recipe recipe = Recipe.Create(ItemID.DirtBlock);
-			recipe.AddIngredient(ItemID.StoneBlock, 10);
-			recipe.AddTile(TileID.WorkBenches);
-			recipe.Register();
+			Recipe.Create(ModContent.ItemType<Content.ShotgunExpansion.Items.Ammo.SilverPellet>(), 90)
+				.AddIngredient(ItemID.SilverBar, 2)
+				.AddTile(TileID.Anvils)
+				.Register();
 		}
 		/*
 		 public override void AddRecipes() {

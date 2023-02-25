@@ -5,7 +5,7 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Subclassesplus.Content.Items.Weapons
+namespace Subclassesplus.Content.ShotgunExpansion.Items.Weapons
 {
 	public class Shellshot : ModItem
 	{
@@ -45,7 +45,7 @@ namespace Subclassesplus.Content.Items.Weapons
 
 			for (int i = 0; i < NumberOfProjectiles; i++) {
 				// Rotate the velocity randomly by 30 degrees at max.
-				Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(20));
+				Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(15));
 
 				// Decrease velocity randomly for nicer visuals.
 				newVelocity *= 1f - Main.rand.NextFloat(0.3f);
