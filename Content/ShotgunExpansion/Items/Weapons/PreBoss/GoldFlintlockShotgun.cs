@@ -5,9 +5,9 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Subclassesplus.Content.ShotgunExpansion.Items.Weapons
+namespace Subclassesplus.Content.ShotgunExpansion.Items.Weapons.PreBoss
 {
-	public class PlatinumFlintlockShotgun : ModItem
+	public class GoldFlintlockShotgun : ModItem
 	{
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("");
@@ -22,8 +22,8 @@ namespace Subclassesplus.Content.ShotgunExpansion.Items.Weapons
 			Item.rare = ItemRarityID.White; // The color that the item's name will be in-game.
 
 			// Use Properties
-			Item.useTime = 32; // The item's use time in ticks (60 ticks == 1 second.)
-			Item.useAnimation = 32; // The length of the item's use animation in ticks (60 ticks == 1 second.)
+			Item.useTime = 33; // The item's use time in ticks (60 ticks == 1 second.)
+			Item.useAnimation = 33; // The length of the item's use animation in ticks (60 ticks == 1 second.)
 			Item.useStyle = ItemUseStyleID.Shoot; // How you use the item (swinging, holding out, etc.)
 			Item.autoReuse = false; // Whether or not you can hold click to automatically use it again.
 			Item.UseSound = SoundID.Item36; // The sound that this item plays when used.
@@ -46,6 +46,7 @@ namespace Subclassesplus.Content.ShotgunExpansion.Items.Weapons
 
 			for (int i = 0; i < NumberOfProjectiles; i++) {
 				// Rotate the velocity randomly by 30 degrees at max.
+
 				Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(15));
 				 
 				// Decrease velocity randomly for nicer visuals.
@@ -58,14 +59,11 @@ namespace Subclassesplus.Content.ShotgunExpansion.Items.Weapons
 			return false; // Return false because we don't want tModLoader to shoot projectile
 		}
 		public override void AddRecipes() {
-			Recipe.Create(ModContent.ItemType<Content.ShotgunExpansion.Items.Weapons.PlatinumFlintlockShotgun>())
-				.AddIngredient(ItemID.PlatinumBar, 8)
+			Recipe.Create(ModContent.ItemType<Content.ShotgunExpansion.Items.Weapons.PreBoss.GoldFlintlockShotgun>())
+				.AddIngredient(ItemID.GoldBar, 8)
+				.AddIngredient(ItemID.Wood, 2)
 				.AddTile(TileID.Anvils)
 				.Register();
-		}
-		public override Vector2? HoldoutOffset()
-		{
-			return new Vector2(-0.5f, -1f);
 		}
 	}
 }

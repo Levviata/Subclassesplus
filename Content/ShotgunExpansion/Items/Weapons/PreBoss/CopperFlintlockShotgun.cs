@@ -5,9 +5,9 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Subclassesplus.Content.ShotgunExpansion.Items.Weapons
+namespace Subclassesplus.Content.ShotgunExpansion.Items.Weapons.PreBoss
 {
-	public class IronFlintlockShotgun : ModItem
+	public class CopperFlintlockShotgun : ModItem
 	{
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("");
@@ -22,16 +22,15 @@ namespace Subclassesplus.Content.ShotgunExpansion.Items.Weapons
 			Item.rare = ItemRarityID.White; // The color that the item's name will be in-game.
 
 			// Use Properties
-			Item.useTime = 35; // The item's use time in ticks (60 ticks == 1 second.)
-			Item.useAnimation = 35; // The length of the item's use animation in ticks (60 ticks == 1 second.)
+			Item.useTime = 36; // The item's use time in ticks (60 ticks == 1 second.)
+			Item.useAnimation = 36; // The length of the item's use animation in ticks (60 ticks == 1 second.)
 			Item.useStyle = ItemUseStyleID.Shoot; // How you use the item (swinging, holding out, etc.)
 			Item.autoReuse = false; // Whether or not you can hold click to automatically use it again.
 			Item.UseSound = SoundID.Item36; // The sound that this item plays when used.
 
 			// Weapon Properties
 			Item.DamageType = DamageClass.Ranged; // Sets the damage type to ranged.
-			Item.damage = 4; // Sets the item's damage. Note that projectiles shot by this weapon will use its and the used ammunition's damage added together.
-			Item.crit = 0;
+			Item.damage = 2; // Sets the item's damage. Note that projectiles shot by this weapon will use its and the used ammunition's damage added together.
 			Item.knockBack = 3f; // Sets the item's knockback. Note that projectiles shot by this weapon will use its and the used ammunition's knockback added together.
 			Item.noMelee = true; // So the item's animation doesn't do damage.
 			Item.useAmmo = AmmoID.Bullet;
@@ -58,9 +57,10 @@ namespace Subclassesplus.Content.ShotgunExpansion.Items.Weapons
 			return false; // Return false because we don't want tModLoader to shoot projectile
 		}
 		public override void AddRecipes() {
-			Recipe.Create(ModContent.ItemType<Content.ShotgunExpansion.Items.Weapons.IronFlintlockShotgun>())
-				.AddIngredient(ItemID.IronBar, 8)
-				.AddTile(TileID.Anvils)
+			Recipe.Create(ModContent.ItemType<Content.ShotgunExpansion.Items.Weapons.PreBoss.CopperFlintlockShotgun>())	
+				.AddIngredient(ItemID.CopperBar, 8)
+				.AddIngredient(ItemID.Wood, 2)
+				.AddTile(TileID.Anvils)	
 				.Register();
 		}
 	}

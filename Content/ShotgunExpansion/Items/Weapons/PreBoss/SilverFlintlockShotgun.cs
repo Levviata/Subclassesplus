@@ -5,9 +5,9 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Subclassesplus.Content.ShotgunExpansion.Items.Weapons
+namespace Subclassesplus.Content.ShotgunExpansion.Items.Weapons.PreBoss
 {
-	public class LeadFlintlockShotgun : ModItem
+	public class SilverFlintlockShotgun : ModItem
 	{
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("");
@@ -30,7 +30,7 @@ namespace Subclassesplus.Content.ShotgunExpansion.Items.Weapons
 
 			// Weapon Properties
 			Item.DamageType = DamageClass.Ranged; // Sets the damage type to ranged.
-			Item.damage = 4;
+			Item.damage = 6; // Sets the item's damage. Note that projectiles shot by this weapon will use its and the used ammunition's damage added together.
 			Item.crit = 0;
 			Item.knockBack = 3f; // Sets the item's knockback. Note that projectiles shot by this weapon will use its and the used ammunition's knockback added together.
 			Item.noMelee = true; // So the item's animation doesn't do damage.
@@ -57,12 +57,11 @@ namespace Subclassesplus.Content.ShotgunExpansion.Items.Weapons
 
 			return false; // Return false because we don't want tModLoader to shoot projectile
 		}
-
-		// Please see Content/ExampleRecipes.cs for a detailed explanation of recipe creation.
 		public override void AddRecipes() {
-			Recipe.Create(ModContent.ItemType<Content.ShotgunExpansion.Items.Weapons.LeadFlintlockShotgun>())
-				.AddIngredient(ItemID.LeadBar, 8)
-				.AddTile(TileID.Anvils)
+			Recipe.Create(ModContent.ItemType<Content.ShotgunExpansion.Items.Weapons.PreBoss.SilverFlintlockShotgun>())	
+				.AddIngredient(ItemID.SilverBar, 8)	
+				.AddIngredient(ItemID.Wood, 2)
+				.AddTile(TileID.Anvils)	
 				.Register();
 		}
 	}
