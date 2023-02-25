@@ -3,7 +3,7 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Subclassesplus.Content.ShotgunExpansion.Items.Ammo
+namespace Subclassesplus.Content.ShotgunExpansion.Items.Ammo.PreBoss
 {
 	public class TinPellet : ModItem
 	{
@@ -64,7 +64,7 @@ namespace Subclassesplus.Content.ShotgunExpansion.Items.Ammo
 
 		public override void AddRecipes()
 		{
-			Recipe.Create(ModContent.ItemType<Content.ShotgunExpansion.Items.Ammo.TinPellet>(), 90)
+			Recipe.Create(ModContent.ItemType<Content.ShotgunExpansion.Items.Ammo.PreBoss.TinPellet>(), 90)
 				.AddIngredient(ItemID.TinBar, 2)
 				.AddTile(TileID.Anvils)
 				.Register();

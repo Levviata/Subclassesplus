@@ -3,9 +3,9 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Subclassesplus.Content.ShotgunExpansion.Items.Ammo
+namespace Subclassesplus.Content.ShotgunExpansion.Items.Ammo.PreBoss
 {
-	public class GoldPellet : ModItem
+	public class CopperPellet : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
@@ -45,10 +45,10 @@ namespace Subclassesplus.Content.ShotgunExpansion.Items.Ammo
 			Item.height = 32;
 
 			Item.DamageType = DamageClass.Ranged; // Ranged, Magic, etc. ModContent.GetInstance<ExampleDamageClass>();
-			Item.damage = 8;
+			Item.damage = 3;
 			//Item.crit = 6; // 6% + 4% (default crit) = 8% crit chance
 			Item.maxStack = 9999;
-			Item.knockBack = 1.9f; // Average knockback
+			Item.knockBack = 1f; // Average knockback
 			Item.shootSpeed = 7f; // Chlorophyte Shotbow velocity of 11.5f + Wooden Arrows velocity of 3f = 14.5
 			Item.shoot = ProjectileID.Bullet;
 			Item.consumable = true;
@@ -64,8 +64,8 @@ namespace Subclassesplus.Content.ShotgunExpansion.Items.Ammo
 
 		public override void AddRecipes()
 		{
-			Recipe.Create(ModContent.ItemType<Content.ShotgunExpansion.Items.Ammo.GoldPellet>(), 90)
-				.AddIngredient(ItemID.GoldBar, 2)
+			Recipe.Create(ModContent.ItemType<Content.ShotgunExpansion.Items.Ammo.PreBoss.CopperPellet>(), 90)
+				.AddIngredient(ItemID.CopperBar, 2)
 				.AddTile(TileID.Anvils)
 				.Register();
 		}
