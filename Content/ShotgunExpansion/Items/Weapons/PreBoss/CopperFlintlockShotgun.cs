@@ -45,7 +45,7 @@ namespace Subclassesplus.Content.ShotgunExpansion.Items.Weapons.PreBoss
 
 			for (int i = 0; i < NumberOfProjectiles; i++) {
 				// Rotate the velocity randomly by 30 degrees at max.
-				Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(15));
+				Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(10));
 				 
 				// Decrease velocity randomly for nicer visuals.
 				newVelocity *= 1f - Main.rand.NextFloat(0.3f);
@@ -62,6 +62,10 @@ namespace Subclassesplus.Content.ShotgunExpansion.Items.Weapons.PreBoss
 				.AddIngredient(ItemID.Wood, 2)
 				.AddTile(TileID.Anvils)	
 				.Register();
+		}
+		public override Vector2? HoldoutOffset()
+		{
+			return new Vector2(-0.5f, -1f);
 		}
 	}
 }
