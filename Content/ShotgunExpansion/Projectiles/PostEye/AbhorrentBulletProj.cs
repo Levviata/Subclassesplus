@@ -37,8 +37,6 @@ namespace Subclassesplus.Content.ShotgunExpansion.Projectiles.PostEye
 			Projectile.localNPCHitCooldown = 30;
 
 			if (Tick == 12) { 
-				Projectile.usesLocalNPCImmunity = true;
-				Projectile.localNPCHitCooldown = 30;
 					for (int i = 0; i <= FirstHalfRepetitions; i++)
 					{
 					Projectile.velocity.X *= 0.6f;
@@ -46,8 +44,6 @@ namespace Subclassesplus.Content.ShotgunExpansion.Projectiles.PostEye
 					}
 			}
 			if (Tick == 18) { 
-				Projectile.usesLocalNPCImmunity = true;
-				Projectile.localNPCHitCooldown = 30;
 					for (int i = 0; i <= SecondHalfRepetitions; i++)
 					{
 					Projectile.velocity.X *= 1f;

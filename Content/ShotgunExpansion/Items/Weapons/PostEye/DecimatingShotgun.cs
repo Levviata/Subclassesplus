@@ -66,7 +66,7 @@ namespace Subclassesplus.Content.ShotgunExpansion.Items.Weapons.PostEye
 			return false;
 		}
 		public override void AddRecipes() {
-			Recipe.Create(ModContent.ItemType<Content.ShotgunExpansion.Items.Weapons.PreBoss.TungstenFlintlockShotgun>())
+			Recipe.Create(ModContent.ItemType<PreBoss.TungstenFlintlockShotgun>())
 				.AddIngredient(ItemID.TungstenBar, 8)
 				.AddIngredient(ItemID.Wood, 2)
 				.AddTile(TileID.Anvils)

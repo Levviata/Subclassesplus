@@ -10,7 +10,7 @@ namespace Subclassesplus.Content.ShotgunExpansion.Items.Ammo.PostEye
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("This is an example sword");
+			Tooltip.SetDefault("These bullets rapidly deaccelerate and then accelerate abhorrently destroying\nthe immunity frames of foes in half while the bullets are gaining momentum");
 
 			//DisplayName.SetDefault("");
 			/* Use \n to make new lines. By default mayus letters create

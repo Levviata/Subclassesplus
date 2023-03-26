@@ -42,11 +42,14 @@ namespace Subclassesplus.Content.ShotgunExpansion.Items.Weapons.PostEye
 		}
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback) {
 
+			Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(10));
+
 			Projectile.NewProjectileDirect(source, position, velocity, ModContent.ProjectileType<DreadfulBulletProj>(), damage, knockback, player.whoAmI);
+			
 			return false;
 		}
 		public override void AddRecipes() {
-			Recipe.Create(ModContent.ItemType<Content.ShotgunExpansion.Items.Weapons.PreBoss.TungstenFlintlockShotgun>())
+			Recipe.Create(ModContent.ItemType<PreBoss.TungstenFlintlockShotgun>())
 				.AddIngredient(ItemID.TungstenBar, 8)
 				.AddIngredient(ItemID.Wood, 2)
 				.AddTile(TileID.Anvils)

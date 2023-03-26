@@ -10,7 +10,7 @@ namespace Subclassesplus.Content.ShotgunExpansion.Items.Ammo.PostEye
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("This is an example sword");
+			Tooltip.SetDefault("Explodes after penetrating four foes");
 
 			//DisplayName.SetDefault("");
 			/* Use \n to make new lines. By default mayus letters create
@@ -19,27 +19,6 @@ namespace Subclassesplus.Content.ShotgunExpansion.Items.Ammo.PostEye
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
 			// Amount needed to duplicate in journey mode
 		}
-		/*
-
-		<8	Insanely Fast
-		9–20	Very Fast
-		21–25	Fast
-		26–30	Average
-		31–35	Slow
-		36–45	Very Slow
-		46–55	Extremely Slow
-		>56	Snail
-
-		0	No knockback
-		0.1 to 1.5	Extremely weak knockback
-		1.6 to 3	Very weak knockback
-		3.1 to 4	Weak knockback
-		4.1 to 6	Average knockback
-		6.1 to 7	Strong knockback
-		7.1 to 9	Very strong knockback
-		9.1 to 11	Extremely strong knockback
-		Above 11	Insane knockback
-		*/
 		public override void SetDefaults()
 		{
 			Item.width = 32;
@@ -65,7 +44,7 @@ namespace Subclassesplus.Content.ShotgunExpansion.Items.Ammo.PostEye
 
 		public override void AddRecipes()
 		{
-			Recipe.Create(ModContent.ItemType<Content.ShotgunExpansion.Items.Ammo.PostEye.DreadfulBullet>(), 70)
+			Recipe.Create(ModContent.ItemType<DreadfulBullet>(), 70)
 				.AddIngredient(ItemID.DemoniteBar, 1)
 				.AddIngredient(ItemID.MusketBall, 70)
 				.AddTile(TileID.Anvils)
