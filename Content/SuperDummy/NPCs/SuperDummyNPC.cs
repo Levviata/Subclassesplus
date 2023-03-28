@@ -1,5 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
-using Subclassesplus.Common.Configs.SupperDummy;
+using Subclassesplus.Common.Configs.SuperDummy;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

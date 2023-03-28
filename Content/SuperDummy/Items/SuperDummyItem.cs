@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Subclassesplus.Content.SuperDummy.Projectiles;
 using Subclassesplus.Content.SuperDummy.NPCs;
-using System.Collections.Generic;
+using Subclassesplus.Common.Configs.SuperDummy;
 
 //Thanks Boaphlipsy for this code (https://github.com/Boaphlipsy/SuperDummy)
 
@@ -15,17 +15,17 @@ namespace Subclassesplus.Content.SuperDummy.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Super Dummy");
+            //var config = ModContent.GetInstance<SuperDummyConfig>();
+            var config = ModContent.GetInstance<SuperDummyConfig>().DefenseModifier;
+            int DefenseModifier = config.DefenseModifier;
+
+            DisplayName.SetDefault($"Super Dummy : Defense {DefenseModifier} ");
             Tooltip.SetDefault("Spawns a super dummy at your cursor\n" +
-                "Can be detected by minions and homing prjectiles\n" +
+                "Can be detected by minions and homing projectiles\n" +
+                $"Dummy currently has {DefenseModifier} Defense\n" +
                 "Right click to remove all spawned super dummies");
 
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-        }
-        public override void ModifyTooltips(List<TooltipLine> tooltips)
-        {
-            TooltipLine tooltip = new TooltipLine(Mod, "ExampleMod: HotPatato", $"You have {timer / 60f:N1} seconds left!") { OverrideColor = Color.Red };
-            tooltips.Add(tooltip);
         }
         public override void SetDefaults()
         {
@@ -46,6 +46,7 @@ namespace Subclassesplus.Content.SuperDummy.Items
 
         public override bool? UseItem(Player player)
         {
+
             if (player.whoAmI == Main.myPlayer)
             {
                 if (player.altFunctionUse == ItemAlternativeFunctionID.ActivatedAndUsed)

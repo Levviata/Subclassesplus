@@ -7,21 +7,25 @@ using Terraria;
 using Terraria.ModLoader.Config;
 
 
-namespace Subclassesplus.Common.Configs.SupperDummy
+namespace Subclassesplus.Common.Configs.SuperDummy
 {
-	[BackgroundColor(99, 180, 209)]
-	[Label("ModConfig Showcase B: Ranges")]
+	[BackgroundColor(73, 93, 112)]
+	[Label("Dev Configuration")]
 	public class SuperDummyConfig : ModConfig
 	{
-		public override ConfigScope Mode => ConfigScope.ClientSide;
+		public override ConfigScope Mode => ConfigScope.ServerSide;
 
-        [Label("Test")]
-        [Tooltip("0 is the defense of a slime, 70 is the defense of Moon Lord's core.")]
+        [Header("Super Dummy Config")]
+
+        [Label("[i/p0:156]  Dummy defense")]
+        [Tooltip("0 is the defense of a slime, 70 is the defense of Moon Lord's core for comparation.")]
         [Increment(1)]
-		[Range(0, 70)]
+		[Range(0, 9999)]
+        [DefaultValue(0)]
+        [SliderColor(120, 239, 148)]
         [DrawTicks]
-        [DefaultValue(100)]
-		[Slider] // The Slider attribute makes this field be presented with a slider rather than a text input. The default ticks is 1.
-		public int DefenseModifier;
+        [BackgroundColor(91, 196, 181)]
+        public int DefenseModifier;
+
 	}
 }
