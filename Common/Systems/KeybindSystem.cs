@@ -11,9 +11,9 @@ namespace Subclassesplus.Common.Systems
 
 		public override void Load() {
             // Registers a new keybind
-            AddDummyDefenseKeybind = KeybindLoader.RegisterKeybind(Mod, "Add One Defense to Super Dummy", "OemComma");
+            AddDummyDefenseKeybind = KeybindLoader.RegisterKeybind(Mod, "Add Defense Super Dummy", "OemComma");
 
-            RetractDummyDefenseKeybind = KeybindLoader.RegisterKeybind(Mod, "Retract One Defense to Super Dummy", "OemPeriod");
+            RetractDummyDefenseKeybind = KeybindLoader.RegisterKeybind(Mod, "Retract Defense Super Dummy", "OemPeriod");
         }
 
 		// Please see ExampleMod.cs' Unload() method for a detailed explanation of the unloading process.

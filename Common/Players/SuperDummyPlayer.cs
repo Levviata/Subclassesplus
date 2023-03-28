@@ -2,6 +2,7 @@ using Terraria.GameInput;
 using Terraria.ModLoader;
 using Subclassesplus.Common.Systems;
 using Subclassesplus.Common.Configs.SuperDummy;
+using Subclassesplus.Content.SuperDummy.NPCs;
 
 namespace Subclassesplus.Common.Playersz
 {
@@ -12,8 +13,8 @@ namespace Subclassesplus.Common.Playersz
 		{
             if (KeybindSystem.AddDummyDefenseKeybind.JustPressed)
             {
-                int DefenseModifier = ModContent.GetInstance<SuperDummyConfig>().DefenseModifier;
-				DefenseModifier++;
+                var DefenseModifierPlayer = SuperDummyNPC.DefenseModifierNPC;
+				DefenseModifierPlayer++;
             }
         }		
 	}

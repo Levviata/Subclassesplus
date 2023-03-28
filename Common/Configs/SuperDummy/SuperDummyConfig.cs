@@ -1,9 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
+using Subclassesplus.Content.SuperDummy.NPCs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Runtime.Serialization;
-using Terraria;
 using Terraria.ModLoader.Config;
 
 
@@ -25,7 +24,7 @@ namespace Subclassesplus.Common.Configs.SuperDummy
         [SliderColor(120, 239, 148)]
         [DrawTicks]
         [BackgroundColor(91, 196, 181)]
-        public int DefenseModifier;
+        public int DefenseModifierConfig = SuperDummyNPC.DefenseModifierNPC;
 
 	}
 }

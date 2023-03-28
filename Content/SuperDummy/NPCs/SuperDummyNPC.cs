@@ -15,6 +15,7 @@ namespace Subclassesplus.Content.SuperDummy.NPCs
         private int hitDirection = 0;
         private int amountOfFrames = 10;
         private int height = 50;
+        public static int DefenseModifierNPC = 0;
 
         public override void SetStaticDefaults()
         {
@@ -25,14 +26,13 @@ namespace Subclassesplus.Content.SuperDummy.NPCs
             };
             NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, bestiaryData);
         }
-
         public override void SetDefaults()
         {
             NPC.CloneDefaults(NPCID.TargetDummy);
             NPC.lifeMax = int.MaxValue;
             NPC.aiStyle = -1;
             NPC.width = 32;
-            NPC.defense = ModContent.GetInstance<SuperDummyConfig>().DefenseModifier;
+            NPC.defense = DefenseModifierNPC;
             NPC.height = height;
             NPC.immortal = false;
             NPC.npcSlots = 0;

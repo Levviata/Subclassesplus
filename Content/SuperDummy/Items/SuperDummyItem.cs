@@ -6,6 +6,7 @@ using Terraria.ModLoader;
 using Subclassesplus.Content.SuperDummy.Projectiles;
 using Subclassesplus.Content.SuperDummy.NPCs;
 using Subclassesplus.Common.Configs.SuperDummy;
+using Subclassesplus.Common.Playersz;
 
 //Thanks Boaphlipsy for this code (https://github.com/Boaphlipsy/SuperDummy)
 
@@ -16,13 +17,12 @@ namespace Subclassesplus.Content.SuperDummy.Items
         public override void SetStaticDefaults()
         {
             //var config = ModContent.GetInstance<SuperDummyConfig>();
-            var config = ModContent.GetInstance<SuperDummyConfig>().DefenseModifier;
-            int DefenseModifier = config.DefenseModifier;
+            var DefenseModifierItem = SuperDummyNPC.DefenseModifierNPC;
 
-            DisplayName.SetDefault($"Super Dummy : Defense {DefenseModifier} ");
+            DisplayName.SetDefault($"Super Dummy : Defense {DefenseModifierItem} ");
             Tooltip.SetDefault("Spawns a super dummy at your cursor\n" +
                 "Can be detected by minions and homing projectiles\n" +
-                $"Dummy currently has {DefenseModifier} Defense\n" +
+                $"Dummy currently has {DefenseModifierItem} Defense\n" +
                 "Right click to remove all spawned super dummies");
 
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
